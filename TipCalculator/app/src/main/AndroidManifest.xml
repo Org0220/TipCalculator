@@ -10,6 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TipCalculator">
         <activity
+            android:name=".UsersInfo"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteUser"
+            android:exported="false" />
+        <activity
+            android:name=".CreateUser"
+            android:exported="false" />
+        <activity
+            android:name=".TipsSummary"
+            android:exported="false" />
+        <activity
+            android:name=".ShiftInformation"
+            android:exported="false" />
+        <activity
+            android:name=".TipInformation"
+            android:exported="false" />
+        <activity
+            android:name=".UserEdit"
+            android:exported="false" />
+        <activity
+            android:name=".TipsCalculate"
+            android:exported="false" />
+        <activity
+            android:name=".UserHomPage"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPage"
+            android:exported="false" />
+        <activity
+            android:name=".UserCreation"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
