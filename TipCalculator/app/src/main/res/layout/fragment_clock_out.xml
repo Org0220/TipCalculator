@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ClockOut">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="211dp"
+        android:layout_height="64dp"
+        android:text="Clock Out" />
 </FrameLayout>

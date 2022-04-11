@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".UsersInfo">
 
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:shadowColor="#502BA3"
+        android:text="Users"
+        android:textColor="#673AB7"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/users"
+        android:layout_width="349dp"
+        android:layout_height="509dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="InvalidId" />
 </androidx.constraintlayout.widget.ConstraintLayout>

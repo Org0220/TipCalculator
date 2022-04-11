@@ -6,4 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".UserCreation">
 
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="82dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="82dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+
+    <EditText
+        android:id="@+id/position"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="82dp"
+        android:ems="10"
+        android:hint="Position"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="57dp"
+        android:gravity="center"
+        android:shadowColor="#502BA3"
+        android:text="Create Your User"
+        android:textColor="#673AB7"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/deleteUser"
+        android:layout_width="244dp"
+
+        android:layout_height="43dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="81dp"
+        android:text="Create User"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/position" />
 </androidx.constraintlayout.widget.ConstraintLayout>
