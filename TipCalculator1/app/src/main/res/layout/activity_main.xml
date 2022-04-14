@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/img">
 
     <TextView
         android:id="@+id/title"
+
+        android:text="Tip Calculator"
+        android:textSize="50dp"
         android:layout_width="412dp"
         android:layout_height="100dp"
         android:layout_marginTop="57dp"
         android:gravity="center"
-        android:text="Tip Calculator"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        android:shadowColor="#502BA3"
-        android:textColor="#673AB7"
+        style="@style/Theme.TipCalculator1.Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +29,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="82dp"
         android:ems="10"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:drawableLeft="@drawable/username"
         android:hint=" Username"
         android:inputType="textPersonName"
@@ -44,11 +45,11 @@
         android:layout_marginStart="81dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="82dp"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:drawableLeft="@drawable/password"
         android:ems="10"
         android:hint=" Password"
         android:inputType="textPassword"
-        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -61,6 +62,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="81dp"
         android:text="Login"
+        android:elevation="10dp"
+        style="@style/Theme.TipCalculator1.Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CreateUser">
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/logout"
         android:layout_width="58dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -25,6 +25,7 @@
         android:gravity="center"
         android:shadowColor="#502BA3"
         android:text="Create User"
+        style="@style/Theme.TipCalculator1.Title"
         android:textStyle="bold"
         android:textColor="#673AB7"
         android:textSize="50dp"
@@ -40,6 +41,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginEnd="82dp"
         android:ems="10"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +57,7 @@
         android:layout_marginEnd="82dp"
         android:ems="10"
         android:hint="Username"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

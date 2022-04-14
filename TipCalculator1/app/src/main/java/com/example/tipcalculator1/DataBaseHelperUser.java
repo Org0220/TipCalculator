@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 public class DataBaseHelperUser extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "TipCalculator.db";
-    private static final String TABLE_NAME = "Shift";
+    private static final String TABLE_NAME = "User";
     private static final String COL_1 = "ID";
     private static final String COL_2 = "username";
     private static final String COL_3 = "password";
@@ -44,6 +44,7 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
         contentValues.put(COL_5,"");
         contentValues.put(COL_6,"");
         long result = db.insert(TABLE_NAME, null, contentValues);
+        System.out.println(result);
         if(result == -1)
             return false;
         else
@@ -59,12 +60,12 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
 
     public Cursor getUser(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from " + TABLE_NAME + "where ID = " + id, null);
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where ID = '" + id + "'", null);
         return res;
     }
     public Cursor getUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from " + TABLE_NAME + "where username = " + username  + "AND password = " + password , null);
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where username = '" + username + "' AND password = '" + password + "'", null);
         return res;
     }
 
@@ -75,11 +76,13 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
     }
 
     public boolean update (String id, String first_name, String last_name, String position) {
+        System.out.println("in");
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, id);
         contentValues.put(COL_4, first_name);
         contentValues.put(COL_5, last_name);
+        contentValues.put(COL_6, position);
         db.update(TABLE_NAME, contentValues, "ID = ?", new String[] {id});
         return  true;
     }

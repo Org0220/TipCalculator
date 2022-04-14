@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserHomePage">
+
+
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/logout"
         android:layout_width="58dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="16dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,69 +22,48 @@
 
     <ImageButton
         android:id="@+id/tipsView"
-        android:layout_width="111dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="47dp"
-        android:background="@null"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:srcCompat="@mipmap/tips_view" />
-
-    <ImageButton
-        android:id="@+id/shiftsView"
-        android:layout_width="103dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="120dp"
-        android:background="@null"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipsView"
-        app:srcCompat="@mipmap/view_shifts" />
-
-    <ImageButton
-        android:id="@+id/editInfo"
-        android:layout_width="98dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="220dp"
-        android:background="@null"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/edit_personal" />
-
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
+        android:layout_width="173.5dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
-        android:text="Shifts"
+        android:background="@null"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shiftsView" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="84dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:text="Edit Personal Information"
-        app:layout_constraintStart_toEndOf="@+id/shiftsView"
-        app:layout_constraintTop_toBottomOf="@+id/editInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/logout"
+        app:srcCompat="@drawable/view_tips" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
         android:name="com.example.tipcalculator1.ClockIn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="107dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/editInfo" />
+
+    <ImageButton
+        android:id="@+id/editInfo"
+        android:layout_width="146.5dp"
+        android:layout_height="190.5dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="164dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_personal_info" />
+
+    <ImageButton
+        android:id="@+id/shiftsView"
+        android:layout_width="173.5dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipsView"
+        app:srcCompat="@drawable/view_shifts" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

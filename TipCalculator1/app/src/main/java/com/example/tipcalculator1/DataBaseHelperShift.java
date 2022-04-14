@@ -56,7 +56,7 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
 
     public Cursor getShift(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from " + TABLE_NAME + "where ID = " + id, null);
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where ID = '" + id + "'", null);
         return res;
     }
 

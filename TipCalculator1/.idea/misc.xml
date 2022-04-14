@@ -3,17 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable-anydpi/logout.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable-anydpi/password.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable-anydpi/textinput.xml" value="0.35" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable-anydpi/username.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable/clock_button.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3635" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/$RNLHSYR.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_admin_page.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_create_user.xml" value="0.3484375" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_delete_user.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_main.xml" value="0.36885245901639346" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_shift_information.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tip_information.xml" value="0.33" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tips_calculate.xml" value="0.33" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tips_summary.xml" value="0.3277777777777778" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_user_creation.xml" value="0.3625" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_user_edit.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_user_home_page.xml" value="0.33" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_users_info.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_clock_in.xml" value="0.5" />
-        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_clock_out.xml" value="0.18781725888324874" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_clock_out.xml" value="0.5" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_tips_down.xml" value="0.3625" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_tips_up.xml" value="0.3625" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/shift_child_row.xml" value="0.3625" />
+        <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator/TipCalculator1/app/src/main/res/layout/users_child_row.xml" value="0.3625" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator1/app/src/main/res/drawable-anydpi/go_back.xml" value="0.1" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator1/app/src/main/res/drawable-anydpi/logout.xml" value="0.2465" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator1/app/src/main/res/drawable-anydpi/password.xml" value="0.2465" />

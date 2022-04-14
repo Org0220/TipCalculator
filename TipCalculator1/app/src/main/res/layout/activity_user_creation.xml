@@ -15,6 +15,7 @@
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
+        style="@style/Theme.TipCalculator1.TextInsert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,7 @@
         android:layout_width="248dp"
         android:layout_height="48dp"
         android:layout_marginStart="81dp"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="82dp"
         android:ems="10"
@@ -42,6 +44,7 @@
         android:layout_marginStart="81dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="82dp"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:ems="10"
         android:hint="Position"
         android:inputType="textPersonName"
@@ -57,6 +60,7 @@
         android:layout_marginTop="57dp"
         android:gravity="center"
         android:shadowColor="#502BA3"
+        style="@style/Theme.TipCalculator1.Title"
         android:text="Create Your User"
         android:textColor="#673AB7"
         android:textSize="50dp"
@@ -67,7 +71,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/deleteUser"
+        android:id="@+id/createUser"
         android:layout_width="244dp"
 
         android:layout_height="43dp"
