@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class TipsCalculate extends AppCompatActivity {
 ImageButton goBack;
+Button salary;
+EditText hoursNum, tipPoint;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,5 +24,6 @@ ImageButton goBack;
                 finish();
             }
         });
+
     }
 }

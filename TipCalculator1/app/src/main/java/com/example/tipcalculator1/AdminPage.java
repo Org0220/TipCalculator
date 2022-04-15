@@ -41,7 +41,7 @@ ImageButton logout;
         viewUsers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(AdminPage.this, .class);
+                Intent i = new Intent(AdminPage.this, UsersInfo.class);
                 startActivity(i);
             }
         });

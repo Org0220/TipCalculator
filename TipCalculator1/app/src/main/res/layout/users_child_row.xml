@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="21dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="First Name Last Name"
@@ -19,26 +19,42 @@
 
     <TextView
         android:id="@+id/position"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="172dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="10dp"
         android:text="Position"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shifts"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="172dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:text="Position"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/shifts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:text="shifts"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

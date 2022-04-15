@@ -2,6 +2,7 @@ package com.example.tipcalculator1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,9 @@ public class UserCreation extends AppCompatActivity {
             public void onClick(View view) {
                 userDb.update(getIntent().getStringExtra("id"),
                         firstName.getText().toString(), lastName.getText().toString(), position.getText().toString());
+                Intent i = new Intent(UserCreation.this, UserHomePage.class);
+                i.putExtra("id", getIntent().getStringExtra("id"));
+                startActivity(i);
             }
         });
     }

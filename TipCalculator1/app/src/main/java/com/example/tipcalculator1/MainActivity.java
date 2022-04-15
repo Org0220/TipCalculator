@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String userName =  username.getText().toString();
                 String pass = password.getText().toString();
-                System.out.println(userName);
-                System.out.println(pass);
                 if(!userName.equals(adminUsername) || !pass.equals(adminPassword)) {
 
                     Cursor user = userDb.getUser(username.getText().toString(), password.getText().toString());

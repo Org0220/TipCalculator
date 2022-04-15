@@ -69,14 +69,14 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
         return res;
     }
 
-    public Integer deleteData (String id) {
+    public Integer deleteData (String username) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME, " ID = ?", new String[] {id});
+        return db.delete(TABLE_NAME, " username = ?", new String[] {username});
 
     }
 
     public boolean update (String id, String first_name, String last_name, String position) {
-        System.out.println("in");
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, id);

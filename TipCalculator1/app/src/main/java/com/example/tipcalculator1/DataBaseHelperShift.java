@@ -17,6 +17,7 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
     private static final String COL_3 = "salary";
     private static final String COL_4 = "worked_hours";
     private static final String COL_5 = "hourly_rate";
+    private static final String COL_6 = "user_id";
 
 
     public DataBaseHelperShift(@Nullable Context context) {
@@ -25,7 +26,8 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table " + TABLE_NAME + " (ID Integer primary key autoincrement, date Text, salary Text, worked_hours Text, hourly_rate Text)");
+        sqLiteDatabase.execSQL("create table " + TABLE_NAME + " (ID Integer primary key autoincrement, date Text, salary Text, worked_hours Text, hourly_rate Text, user_id Text," +
+                "CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`) ON DELETE CASCADE)");
     }
 
     @Override
@@ -34,13 +36,14 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean createUserWithAdmin (String date, String salary , String worked_hours, String hourly_rate) {
+    public boolean createShift (String date, String salary , String worked_hours, String hourly_rate, String user_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,date);
         contentValues.put(COL_3,salary);
         contentValues.put(COL_4,worked_hours);
         contentValues.put(COL_5,hourly_rate);
+        contentValues.put(COL_6,user_id);
         long result = db.insert(TABLE_NAME, null, contentValues);
         if(result == -1)
             return false;
@@ -67,6 +70,18 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
     }
 
     public boolean update(String id, String date, String salary , String worked_hours, String hourly_rate) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_1, id);
+        contentValues.put(COL_2,date);
+        contentValues.put(COL_3,salary);
+        contentValues.put(COL_4,worked_hours);
+        contentValues.put(COL_5,hourly_rate);
+        db.update(TABLE_NAME, contentValues, "ID = ?", new String[] {id});
+        return  true;
+    }
+
+    public boolean update(String id, String date, String salary , String worked_hours, String hourly_rate, String user_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, id);
