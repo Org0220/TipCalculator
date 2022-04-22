@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Date" />
 
     <TextView
-        android:id="@+id/password"
+        android:id="@+id/hoursWorked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
@@ -42,16 +42,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/hourlyRate"
+        android:id="@+id/tips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:layout_marginStart="248dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="10dp"
-        android:text="Hourly Rate"
+        android:text="Tips"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/hoursWorked"
         app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
