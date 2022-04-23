@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerViewAdapter.ViewHolder> {
@@ -77,7 +75,7 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             myDb = new DataBaseHelperShift(mContext);
-            username = itemView.findViewById(R.id.username);
+            username = itemView.findViewById(R.id.tips);
             name = itemView.findViewById(R.id.name);
             position = itemView.findViewById(R.id.position);
             shifts = itemView.findViewById(R.id.shifts);

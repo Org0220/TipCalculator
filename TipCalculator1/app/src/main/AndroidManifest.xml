@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TipCalculator1">
         <activity
+            android:name=".AfterClockOut"
+            android:exported="false" />
+        <activity
             android:name=".TipsSummary"
             android:exported="false" />
         <activity

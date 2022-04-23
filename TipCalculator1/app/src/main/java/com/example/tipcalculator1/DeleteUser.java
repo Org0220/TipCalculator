@@ -17,7 +17,7 @@ public class DeleteUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_user);
-        username = findViewById(R.id.username);
+        username = findViewById(R.id.tips);
         delete = findViewById(R.id.deleteUser);
         userDb = new DataBaseHelperUser(this);
         goBack = findViewById(R.id.logout);

@@ -18,10 +18,11 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
     private static final String COL_4 = "first_name";
     private static final String COL_5 = "last_name";
     private static final String COL_6 = "position";
-
+    private DataBaseHelperShift shiftDB;
 
     public DataBaseHelperUser(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
+        shiftDB = new DataBaseHelperShift(context);
     }
 
     @Override
@@ -63,6 +64,13 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where ID = '" + id + "'", null);
         return res;
     }
+
+    public Cursor getUserByUsername(String username) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where username = '" + username + "'", null);
+        return res;
+    }
+
     public Cursor getUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where username = '" + username + "' AND password = '" + password + "'", null);
@@ -71,6 +79,12 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
 
     public Integer deleteData (String username) {
         SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = getUserByUsername(username);
+        String user_id = "";
+        while(res.moveToNext()) {
+            user_id = res.getString(0);
+        }
+        shiftDB.deleteDataByUser(user_id);
         return db.delete(TABLE_NAME, " username = ?", new String[] {username});
 
     }

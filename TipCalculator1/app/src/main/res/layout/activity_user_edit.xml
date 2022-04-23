@@ -82,7 +82,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/deleteUser"
+        android:id="@+id/editUser"
         android:layout_width="244dp"
 
         android:layout_height="43dp"

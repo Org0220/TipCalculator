@@ -9,24 +9,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ShiftInformation extends AppCompatActivity {
     ImageButton goBack;
     RecyclerView shifts;
     ShiftRecyclerViewAdapter adapter;
-    DataBaseHelperUser db;
+    DataBaseHelperShift db;
     ArrayList<String> userId = new ArrayList<>();
     ArrayList<String> date = new ArrayList<>();
     ArrayList<String> workedHours = new ArrayList<>();
-    ArrayList<String> hourlyRate = new ArrayList<>();
+    ArrayList<String> tipss = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shift_information);
         goBack = findViewById(R.id.logout);
         shifts = findViewById(R.id.shifts);
+        db = new DataBaseHelperShift(this);
         getShift();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,17 +42,18 @@ public class ShiftInformation extends AppCompatActivity {
 
     }
     public void getShift() {
-        Cursor res = db.getALlData();
+        Cursor res = db.getShiftByUser(getIntent().getStringExtra("id"));
 
         while(res.moveToNext()) {
-
-            hourlyRate.add(res.getString(2));
-            date.add(res.getString(3));
-            workedHours.add(res.getString(4));
-            userId.add(res.getString(5));
+            System.out.println(res.getString(0));
+            date.add(res.getString(1));
+            workedHours.add(res.getString(2));
+            tipss.add(res.getString(3));
+            userId.add(res.getString(4));
         }
+
         adapter = new
-                ShiftRecyclerViewAdapter(date, workedHours, hourlyRate, userId,this);
+                ShiftRecyclerViewAdapter(date, workedHours, tipss, userId,this);
 
         shifts.setAdapter(adapter);
         userId = new ArrayList<>();

@@ -2,11 +2,13 @@ package com.example.tipcalculator1;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +16,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ClockOut extends Fragment {
-
+Button clockOut;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,5 +62,18 @@ public class ClockOut extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_clock_out, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Connector con = (Connector) getActivity();
+        clockOut = getActivity().findViewById(R.id.clockOut);
+        clockOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                con.respond2();
+            }
+        });
     }
 }

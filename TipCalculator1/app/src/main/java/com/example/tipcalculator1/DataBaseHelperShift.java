@@ -20,13 +20,12 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
 
 
     public DataBaseHelperShift(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table " + TABLE_NAME + " (ID Integer primary key autoincrement, date Text, worked_hours Text, tips Text, user_id Text," +
-                "CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `User` (`id`) ON DELETE CASCADE)");
+        sqLiteDatabase.execSQL("create table " + TABLE_NAME + " (ID Integer primary key autoincrement, date Text, worked_hours Text, tips Text, user_id Text)");
     }
 
     @Override
@@ -35,7 +34,7 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean createShift (String date, String salary , String worked_hours, String tips, String user_id) {
+    public boolean createShift (String date, String worked_hours, String tips, String user_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,date);
@@ -70,10 +69,13 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
     public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, " ID = ?", new String[] {id});
-
+    }
+    public Integer deleteDataByUser (String user_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, " user_id = ?", new String[] {user_id});
     }
 
-    public boolean update(String id, String date, String salary , String tips, String hourly_rate) {
+    public boolean update(String id, String date , String tips, String hourly_rate) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, id);
@@ -84,7 +86,7 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
         return  true;
     }
 
-    public boolean update(String id, String date, String salary , String worked_hours, String tips, String user_id) {
+    public boolean update(String id, String date , String worked_hours, String tips, String user_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, id);

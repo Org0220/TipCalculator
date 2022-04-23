@@ -36,7 +36,7 @@ public class ShiftRecyclerViewAdapter extends RecyclerView.Adapter<ShiftRecycler
     @Override
     public ShiftRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = minflator.from(parent.getContext()).inflate(R.layout.users_child_row, parent, false);
+        View view = minflator.from(parent.getContext()).inflate(R.layout.shift_child_row, parent, false);
 
         return new ShiftRecyclerViewAdapter.ViewHolder(view);
     }
@@ -45,10 +45,14 @@ public class ShiftRecyclerViewAdapter extends RecyclerView.Adapter<ShiftRecycler
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(mContext);
         holder.date.setText(date.get(position) );
-        holder.amountEarned.setText(workedHours.get(position));
-        holder.tips.setText(tipss.get(position));
-        int sl = (int)(Integer.parseInt(tipss.get(position)) + 10.80) * Integer.parseInt(workedHours.get(position)); // calculates the salary based on the (tips + 10.80) * hours
-        holder.salary.setText(sl + "");
+        holder.workedHour.setText("Worked Hours: " + workedHours.get(position));
+        holder.tips.setText("Tips :" + tipss.get(position));
+        System.out.println(tipss.get(position));
+        System.out.println(workedHours.get(position));
+        System.out.println(date.get(position));
+        double sl = (double)(Double.parseDouble(tipss.get(position)) + 10.80) * Double.parseDouble(workedHours.get(position)); // calculates the salary based on the (tips + 10.80) * hours
+
+         holder.salary.setText(String.format("Salary: %.2f",sl));
     }
 
     @Override
@@ -58,15 +62,15 @@ public class ShiftRecyclerViewAdapter extends RecyclerView.Adapter<ShiftRecycler
 
     public  class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView date, amountEarned, tips, salary;
+        TextView date, workedHour, tips, salary;
         DataBaseHelperShift myDb;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             myDb = new DataBaseHelperShift(mContext);
-            tips = itemView.findViewById(R.id.username);
-            date = itemView.findViewById(R.id.name);
-            salary = itemView.findViewById(R.id.salary);
-            amountEarned = itemView.findViewById(R.id.position);
+            tips = itemView.findViewById(R.id.tips);
+            date = itemView.findViewById(R.id.Date);
+            salary = itemView.findViewById(R.id.amountEarned);
+            workedHour = itemView.findViewById(R.id.hoursWorked);
         }
     }
 }
