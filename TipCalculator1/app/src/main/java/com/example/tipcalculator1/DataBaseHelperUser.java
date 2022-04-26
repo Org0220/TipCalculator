@@ -21,7 +21,7 @@ public class DataBaseHelperUser extends SQLiteOpenHelper {
     private DataBaseHelperShift shiftDB;
 
     public DataBaseHelperUser(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 2);
+        super(context, DATABASE_NAME, null, 3);
         shiftDB = new DataBaseHelperShift(context);
     }
 

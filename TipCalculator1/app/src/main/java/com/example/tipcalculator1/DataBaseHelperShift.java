@@ -20,7 +20,7 @@ public class DataBaseHelperShift extends SQLiteOpenHelper {
 
 
     public DataBaseHelperShift(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, 2);
+        super(context, DATABASE_NAME, null, 3);
     }
 
     @Override

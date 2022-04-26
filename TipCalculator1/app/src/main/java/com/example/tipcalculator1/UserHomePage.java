@@ -87,9 +87,9 @@ public class UserHomePage extends AppCompatActivity implements Connector{
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         date2 = new Date();
         double diff = date2.getTime() - date1.getTime();
-        double difference = TimeUnit.MINUTES.convert((long) diff, TimeUnit.MILLISECONDS);
-
-        double hours = difference/60;
+        double difference = TimeUnit.SECONDS.convert((long) diff, TimeUnit.MILLISECONDS);
+        System.out.println(diff);
+        double hours = difference;
         System.out.println(hours);
 
 

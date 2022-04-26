@@ -1,5 +1,6 @@
 package com.example.tipcalculator1;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -29,10 +30,28 @@ DataBaseHelperShift db;
             @Override
             public void onClick(View view) {
                 if(isNumeric(tips.getText().toString())) {
-                    db.createShift(date, hours, tips.getText().toString(), user_id);
+                    if (db.createShift(date, hours, tips.getText().toString(), user_id)) {
+                        System.out.println("f");
+                        Intent i = new Intent(AfterClockOut.this, TipInformation.class);
+                        i.putExtra("hours",hours);
+                        i.putExtra("date", date);
+                        i.putExtra("tips", tips.getText().toString());
+                        startActivityForResult(i, 1);
+                    }
                 }
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                finish();
+            }
+
+        }
     }
     public static boolean isNumeric (String s) {
         for(char chr : s.toCharArray()) {

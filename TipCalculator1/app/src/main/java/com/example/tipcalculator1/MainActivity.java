@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         userDb = new DataBaseHelperUser(this);
+        username.setText("");
+        password.setText("");
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
