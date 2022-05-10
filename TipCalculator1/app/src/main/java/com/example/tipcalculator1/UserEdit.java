@@ -3,6 +3,7 @@ package com.example.tipcalculator1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,12 @@ ImageButton goBack;
         position = findViewById(R.id.position);
         edit = findViewById(R.id.editUser);
         userDb = new DataBaseHelperUser(this);
+        Cursor cursor = userDb.getUser(getIntent().getStringExtra("id"));
+        while(cursor.moveToNext()) {
+            firstName.setText(cursor.getString(3));
+            lastName.setText(cursor.getString(4));
+            position.setText(cursor.getString(5));
+        }
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

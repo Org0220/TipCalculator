@@ -59,12 +59,17 @@
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Gevorg/AndroidStudioProjects/TipCalculator1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_admin_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_after_clock_out.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_delete_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_maps.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_shift_information.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tip_information.xml" value="0.4" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tips_calculate.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_tips_summary.xml" value="0.2037037037037037" />
+        <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_user_edit.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/activity_users_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_clock_out.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/fragment_tips_down.xml" value="0.1398148148148148" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/shift_child_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/armen/Documents/GitHub/TipCalculator/TipCalculator1/app/src/main/res/layout/users_child_row.xml" value="0.25416666666666665" />

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,7 +30,7 @@ DataBaseHelperShift db;
         createShift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isNumeric(tips.getText().toString())) {
+                if(isNumeric(tips.getText().toString()) && !tips.getText().toString().isEmpty()) {
                     if (db.createShift(date, hours, tips.getText().toString(), user_id)) {
                         System.out.println("f");
                         Intent i = new Intent(AfterClockOut.this, TipInformation.class);
@@ -39,6 +40,8 @@ DataBaseHelperShift db;
                         startActivityForResult(i, 1);
                     }
                 }
+                else
+                    Toast.makeText(AfterClockOut.this, "Input Valid Tip!", Toast.LENGTH_SHORT).show();
             }
         });
     }

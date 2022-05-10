@@ -1,12 +1,17 @@
 package com.example.tipcalculator1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -98,6 +103,22 @@ public class UserHomePage extends AppCompatActivity implements Connector{
         i.putExtra("id", user_id);
         i.putExtra("hours", String.format("%.2f", hours));
         i.putExtra("date", formatter.format(date2));
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("My Notification", " My Notificition Channel",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(UserHomePage.this, "My Notification");
+        builder.setContentTitle("You have completed your shift");
+        builder.setContentText("Shift Total Hours: "+String.format("%.2f", hours)+"");
+        builder.setSmallIcon(R.drawable.ic_launcher_background);
+        builder.setAutoCancel(true);
+
+
+        NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
         startActivity(i);
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.setReorderingAllowed(true);

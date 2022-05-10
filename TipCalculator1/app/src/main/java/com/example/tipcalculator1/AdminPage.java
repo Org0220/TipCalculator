@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class AdminPage extends AppCompatActivity {
 Button createUser, deleteUser, viewUsers;
+
+    private FirebaseAuth mAuth;
 ImageButton logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,8 @@ ImageButton logout;
         deleteUser = findViewById(R.id.deleteUser);
         viewUsers = findViewById(R.id.viewUsers);
         logout = findViewById(R.id.logout);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
 
@@ -49,6 +55,7 @@ ImageButton logout;
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
                 finish();
             }
         });

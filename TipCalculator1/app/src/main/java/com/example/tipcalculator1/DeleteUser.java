@@ -2,11 +2,13 @@ package com.example.tipcalculator1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class DeleteUser extends AppCompatActivity {
     Button delete;
@@ -30,13 +32,18 @@ public class DeleteUser extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goBack = findViewById(R.id.logout);
-                goBack.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        userDb.deleteData(username.getText().toString());
+                Cursor res = userDb.getALlData();
+                boolean doesExist = false;
+                while (res.moveToNext()) {
+                    if (username.getText().toString().equalsIgnoreCase(res.getString(1))) {
+                        doesExist = true;
                     }
-                });
+                }
+                if (doesExist && !username.getText().toString().isEmpty()) {
+                    userDb.deleteData(username.getText().toString());
+                    Toast.makeText(getApplicationContext(), "User Deleted!", Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(getApplicationContext(), "Enter Valid Username", Toast.LENGTH_LONG).show();
             }
         });
     }

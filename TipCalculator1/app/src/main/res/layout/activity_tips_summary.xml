@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TipsSummary">
+
     <ImageButton
         android:id="@+id/logout"
         android:layout_width="58dp"
@@ -19,51 +20,58 @@
 
     <TextView
         android:id="@+id/title"
+        style="@style/Theme.TipCalculator1.Title"
         android:layout_width="412dp"
         android:layout_height="100dp"
         android:layout_marginTop="57dp"
         android:gravity="center"
-        android:text="Tips Calculator"
-        android:textSize="50dp"
-        style="@style/Theme.TipCalculator1.Title"
-        android:textStyle="bold"
         android:shadowColor="#502BA3"
+        android:text="Tip Summary"
         android:textColor="#673AB7"
+        android:textSize="50dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.tipcalculator1.TipsUp"
+        android:name="com.example.tipcalculator1.TipsDown"
         android:layout_width="134dp"
         android:layout_height="109dp"
-        android:layout_marginStart="261dp"
-        android:layout_marginTop="91dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toEndOf="@+id/tips" />
 
     <TextView
         android:id="@+id/tips"
         android:layout_width="122dp"
         android:layout_height="61dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="#323232"
         android:gravity="center"
-        android:text="$Tips+"
-        android:textColor="#2BF133"
+        android:outlineProvider="none"
+        android:text="$Tips-"
+        android:textColor="#E80F0F"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="50dp"
-        android:text="This week:"
-        android:textColor="@color/purple_700"
+    <ImageView
+        android:id="@+id/chartView"
+        android:layout_width="408dp"
+        android:layout_height="338dp"
+        android:layout_marginBottom="152dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:srcCompat="@drawable/textinput" />
 </androidx.constraintlayout.widget.ConstraintLayout>

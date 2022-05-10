@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/img">
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/title"
 
-        android:text="Tip Calculator"
-        android:textSize="50dp"
+        style="@style/Theme.TipCalculator1.Title"
         android:layout_width="412dp"
         android:layout_height="100dp"
         android:layout_marginTop="57dp"
         android:gravity="center"
-        style="@style/Theme.TipCalculator1.Title"
+        android:text="Tip Calculator"
+        android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/username"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:layout_width="248dp"
         android:layout_height="48dp"
         android:layout_marginStart="81dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="82dp"
-        android:ems="10"
-        style="@style/Theme.TipCalculator1.TextInsert"
         android:drawableLeft="@drawable/username"
+        android:ems="10"
         android:hint=" Username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +40,12 @@
 
     <EditText
         android:id="@+id/password"
+        style="@style/Theme.TipCalculator1.TextInsert"
         android:layout_width="248dp"
         android:layout_height="48dp"
         android:layout_marginStart="81dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="82dp"
-        style="@style/Theme.TipCalculator1.TextInsert"
         android:drawableLeft="@drawable/password"
         android:ems="10"
         android:hint=" Password"
@@ -56,18 +56,35 @@
 
     <Button
         android:id="@+id/Login"
+        style="@style/Theme.TipCalculator1.Button"
         android:layout_width="244dp"
         android:layout_height="43dp"
         android:layout_marginStart="82dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="81dp"
-        android:text="Login"
         android:elevation="10dp"
-        style="@style/Theme.TipCalculator1.Button"
+        android:gravity="center"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/mapsB"
+        style="@style/Theme.TipCalculator1.Button"
+        android:layout_width="244dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="100dp"
+        android:text="Where Is our Restauarant?"
+        app:icon="@drawable/googleg_standard_color_18"
+        app:iconGravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

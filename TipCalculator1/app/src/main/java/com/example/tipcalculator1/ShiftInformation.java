@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 public class ShiftInformation extends AppCompatActivity {
@@ -51,6 +52,10 @@ public class ShiftInformation extends AppCompatActivity {
             tipss.add(res.getString(3));
             userId.add(res.getString(4));
         }
+        Collections.reverse(date);
+        Collections.reverse(workedHours);
+        Collections.reverse(tipss);
+        Collections.reverse(userId);
 
         adapter = new
                 ShiftRecyclerViewAdapter(date, workedHours, tipss, userId,this);

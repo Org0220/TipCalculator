@@ -52,7 +52,7 @@
     <Button
         android:id="@+id/deleteUser"
         android:layout_width="244dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginStart="82dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="81dp"
